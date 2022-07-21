@@ -1,0 +1,32 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+public class ExtratorDeConteudoDoIMDB implements ExtratorDeConteudo {
+    
+    public List<Conteudo> extraiConteudos(String json) {
+        
+        //Extrair Conteudos
+
+        var parser = new JsonParser();
+        List<Map<String, String>> listaDeAtributos = parser.parse(json);
+
+        List<Conteudo> conteudos = new ArrayList<>();
+
+        //popular a lista de conteudos
+
+        for (Map<String, String> atributos : listaDeAtributos) {
+
+            String titulo = atributos.get("title");
+            String urlImagem = atributos.get("image")
+                    .replace("_V1_UX128_CR0,3,128,176_AL_", "");
+
+            var conteudo = new Conteudo(titulo, urlImagem);
+
+            conteudos.add(conteudo);
+        }
+
+        return conteudos;
+
+    }
+}
