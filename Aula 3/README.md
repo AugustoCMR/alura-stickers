@@ -1,8 +1,9 @@
 # alura-stickers
 
 Imersão de Java - Alura
-- Aula 1.
+- Aula 3.
 
-![Terminal imersão1](https://user-images.githubusercontent.com/103079820/179868105-9ecf7a8f-22ff-48f4-8b71-f56740161170.png)
+![Aula 3](https://user-images.githubusercontent.com/103079820/180325346-0c3c7623-b80b-4f8a-b684-ab63de3c8244.png)
+
 
 
